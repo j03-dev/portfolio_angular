@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {CardComponent} from "./card/card.component";
-import {NgForOf} from "@angular/common";
-import {Project} from "./project";
+import { Component } from '@angular/core';
+import { CardComponent } from "./card/card.component";
+import { NgForOf } from "@angular/common";
+import { Project } from "./project";
 
 @Component({
   selector: 'app-project',

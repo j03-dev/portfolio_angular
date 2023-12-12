@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {SkillCardComponent} from "./skill-card/skill-card.component";
-import {NgForOf} from "@angular/common";
+import { Component } from '@angular/core';
+import { SkillCardComponent } from "./skill-card/skill-card.component";
+import { NgForOf } from "@angular/common";
 
 @Component({
   selector: 'app-skill',

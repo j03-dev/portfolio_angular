@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-left',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-left',
+    standalone: true,
+    imports: [],
+    template: `
       <div class="left">
           <div class="left-top">
               <h1>Fullstack Developer</h1>
@@ -23,7 +23,7 @@ import { Component } from '@angular/core';
           </div>
       </div>
   `,
-  styleUrl: './left.component.css'
+    styleUrl: './left.component.css'
 })
 export class LeftComponent {
 

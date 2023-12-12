@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {NavComponent} from "./components/nav/nav.component";
-import {ProfileComponent} from "./components/profile/profile.component";
-import {SkillComponent} from "./components/skill/skill.component";
-import {ProjectComponent} from "./components/project/project.component";
+import { Component } from '@angular/core';
+import { NavComponent } from "./components/nav/nav.component";
+import { ProfileComponent } from "./components/profile/profile.component";
+import { SkillComponent } from "./components/skill/skill.component";
+import { ProjectComponent } from "./components/project/project.component";
 
 @Component({
   selector: 'app-root',
