@@ -1,7 +1,7 @@
 .right {
-  width: 50%;
+  width: 5%;
   display: grid;
-  place-content: center;
+  place-content: flex-start;
 }
 
 img {

@@ -6,11 +6,15 @@ import {Project} from "./project";
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CardComponent, NgForOf],
+  imports: [NgForOf, CardComponent],
   template: `
     <section class="project">
-      <app-card *ngFor="let project of projects" [title]="project.title" [description]="project.description"
-                [link_project]="project.link_project" [image]="project.image">
+      <app-card *ngFor="let project of projects"
+                [title]="project.title"
+                [description]="project.description"
+                [link_project]="project.link_project"
+                [image]="project.image"
+      >
       </app-card>
     </section>
   `,

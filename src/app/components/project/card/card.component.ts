@@ -12,7 +12,7 @@ import {Component, Input} from '@angular/core';
         </figure>
         <div class="article-body">
           <h2>{{title}}</h2>
-          <p>{{description}} </p>
+          <p>{{description}}</p>
           <a href="{{link_project}}" class="read-more"> </a>
         </div>
       </div>
@@ -20,6 +20,7 @@ import {Component, Input} from '@angular/core';
   `,
   styleUrl: './card.component.css'
 })
+
 export class CardComponent {
   @Input('title') title: string = "";
   @Input('image') image: string = "";

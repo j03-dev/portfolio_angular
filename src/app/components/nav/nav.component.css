@@ -1,30 +1,34 @@
 nav {
-  margin-top: 10px;
+  font-size: 20px;
+  padding-top: 30px;
+  margin: auto;
   width: 100%;
+  height: 20%;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  gap: 10vh
+}
+nav div:nth-of-type(2){
+  width: fit-content !important;
+}
+
+nav div {
+  width: 50%;
 }
 
 nav ul {
-  margin: 0;
+  gap: 1em;
+  width: 50%;
   padding: 0;
-  width: 100%;
-  font-size: 20px;
-  list-style: none;
   display: flex;
-  justify-content: space-between;
-  color: var(--primary-color);
+  font-weight: bold;
+  list-style: none;
+  place-content: flex-end;
+  color: var(--primary-color)
 }
 
 .name {
   font-size: larger;
   font-weight: bold;
-  color: var(--secondary-color);
-}
-
-header {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  align-items: center;
+  color: var(--secondary-color)
 }

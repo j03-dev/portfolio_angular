@@ -6,10 +6,11 @@ article {
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #fff;
+  background: white;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  color: var(--title-color);
 }
 
 article a::after {
@@ -26,7 +27,6 @@ article h2 {
   font-family: "Bebas Neue", cursive;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
-  color: var(--title-color);
   transition: color 0.3s ease-out;
 }
 
@@ -52,11 +52,11 @@ article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #28666e;
+  color: var(--secondary-color);
 }
 
 article a:focus {
-  outline: 1px dotted #28666e;
+  outline: 1px dotted var(--secondary-color);
 }
 
 article a .icon {

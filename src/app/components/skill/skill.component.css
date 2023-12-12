@@ -1,7 +1,6 @@
-.skill-container {
-  height: 10%;
+.skills {
+  height: 20%;
   display: flex;
   place-content: center;
-  gap: 2em;
+  gap: 10vh
 }
-
