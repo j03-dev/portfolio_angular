@@ -9,8 +9,9 @@ import { NgForOf } from "@angular/common";
   template: `
     <div class="skills">
       <app-skill-card
-        *ngFor="let icon of icons"
-        [icon]="icon"
+        *ngFor="let skill of skills"
+        [icon]="skill.icon"
+        [name]="skill.name"
       >
       </app-skill-card>
     </div>
@@ -19,12 +20,14 @@ import { NgForOf } from "@angular/common";
 })
 
 export class SkillComponent {
-  icons = [
-    "https://static.djangoproject.com/img/logos/django-logo-positive.svg",
-    "assets/icon/angular-svgrepo-com.svg",
-    "assets/icon/flask-svgrepo-com.svg",
-    "assets/icon/rust-svgrepo-com.svg",
-    "assets/icon/java-svgrepo-com.svg",
-    "assets/icon/opencv-svgrepo-com.svg"
+  skills = [
+    { name: "django", icon: "https://static.djangoproject.com/img/logos/django-logo-positive.svg" },
+    { name: "angular", icon: "assets/icon/angular-svgrepo-com.svg" },
+    { name: "flask", icon: "assets/icon/flask-svgrepo-com.svg" },
+    { name: "spring boot", icon: "assets/icon/spring-boot-svgrepo-com.svg" },
+    { name: "linux", icon: "assets/icon/linux-svgrepo-com.svg" },
+    { name: "git", icon: "assets/icon/git-svgrepo-com.svg" },
+    { name: "docker", icon: "assets/icon/docker-svgrepo-com.svg" },
+    { name: "rust", icon: "assets/icon/rust-svgrepo-com.svg" },
   ]
 }

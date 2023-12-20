@@ -9,11 +9,10 @@ import { Component } from '@angular/core';
           <div class="left-top">
               <h1>Fullstack Developer</h1>
               <p>
-                  As a dedicated Fullstack Developer, I bring ideas to life through the language of code. <br> Step into
-                  my
-                  digital realm, where each line of code tells a tale of innovation and creativity, <br>transforming
-                  concepts
-                  into captivating experiences.
+                  My name is <b>FITAHIANA Nomeniavo joe</b> but you can call me <u><b>Joe</b></u>. 
+                  <br>As a dedicated Fullstack Developer, I bring ideas to life through the language of code. 
+                  <br>Step into my digital realm, where each line of code tells a tale of innovation and creativity,
+                  <br> transforming concepts into captivating experiences.
               </p>
           </div>
 

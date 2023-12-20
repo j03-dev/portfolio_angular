@@ -1,3 +1,9 @@
-div img {
-  padding: 20px;
+div {
+  padding-right: 50px;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  color: var(--secondary-color)
 }
