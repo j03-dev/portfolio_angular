@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="right">
       <div class="image-container">
-        <img src="assets/image.jpg" alt="image-profile">
+        <img src="assets/image.jpeg" alt="image-profile">
       </div>
     </div>
   `,
