@@ -1,8 +1,21 @@
-section {
+.profile {
+  display: flex;
+  flex-direction: row;
   margin: auto;
   width: 85%;
   height: 80%;
   display: flex;
   place-items: center;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  app-right {
+    order: -1;
+  }
 }

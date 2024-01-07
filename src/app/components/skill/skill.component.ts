@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
 import { SkillCardComponent } from "./skill-card/skill-card.component";
-import { NgForOf } from "@angular/common";
 
 @Component({
   selector: 'app-skill',
   standalone: true,
-  imports: [SkillCardComponent, NgForOf],
+  imports: [SkillCardComponent],
   template: `
     <div class="skills">
-      <app-skill-card
-        *ngFor="let skill of skills"
-        [icon]="skill.icon"
-        [name]="skill.name"
-      >
-      </app-skill-card>
+      @for (skill of skills; track $index) {
+        <app-skill-card [icon]="skill.icon" [name]="skill.name"></app-skill-card>
+      }
     </div>
   `,
   styleUrl: './skill.component.css'

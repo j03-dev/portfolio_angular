@@ -7,7 +7,7 @@ import { RightComponent } from "./right/right.component";
   standalone: true,
   imports: [LeftComponent, RightComponent],
   template: `
-    <section>
+    <section class="profile">
       <app-left></app-left>
       <app-right></app-right>
     </section>

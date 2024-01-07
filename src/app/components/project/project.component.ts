@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { CardComponent } from "./card/card.component";
-import { NgForOf } from "@angular/common";
 import { Project } from "./project";
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [NgForOf, CardComponent],
+  imports: [CardComponent],
   template: `
     <section class="project">
-      <app-card *ngFor="let project of projects"
-                [title]="project.title"
-                [description]="project.description"
-                [link_project]="project.link_project"
-                [image]="project.image"
-      >
-      </app-card>
+      @for (project of projects; track $index) {
+        <app-card 
+                  [title]="project.title"
+                  [description]="project.description"
+                  [link_project]="project.link_project"
+                  [image]="project.image"
+        >
+        </app-card>
+      }
     </section>
   `,
   styleUrl: './project.component.css'

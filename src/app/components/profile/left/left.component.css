@@ -11,7 +11,7 @@
 }
 
 .left-top p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .left-bottom {
@@ -29,17 +29,35 @@ button {
   width: 300px;
   height: 40px;
   border: none;
-  border-radius: 40px;
-  font-size: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--bg-color);
   font-weight: bold;
 }
 
 .left-bottom button:first-child {
-  color: var(--bg-color);
   background-color: var(--primary-color);
 }
 
 .left-bottom button:last-child {
-  color: var(--bg-color);
   background-color: var(--secondary-color);
+}
+
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .left-bottom {
+    width: 100%;
+    flex-direction: column;
+    flex-grow: row;
+  }
+
 }
