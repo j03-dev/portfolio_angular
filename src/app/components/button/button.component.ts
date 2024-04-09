@@ -13,6 +13,11 @@ import { Component, Input } from '@angular/core';
       {{ text }}
     </button>
   `,
+  styles: `
+  .hover_animation {
+    
+  }
+  `
 })
 export class ButtonComponent {
   @Input('text') text: string = '';

@@ -1,15 +1,23 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from './components/button/button.component';
 import { TechnoComponent } from './components/techno/techno.component';
+import { CardComponent } from './components/card/card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ButtonComponent, TechnoComponent],
+  imports: [ButtonComponent, TechnoComponent, CardComponent],
   template: `
-    <div class="container flex flex-col items-center justify-center m-auto w-11/12 md:w-9/12">
-      <section class="flex flex-col items-center md:flex-row-reverse h-4/5 mt-10 md:mt-32 justify-between">
-        <img class="rounded-full size-11/12 md:size-1/3" src="/assets/image.jpeg"/>
+    <div
+      class="container flex flex-col items-center justify-center m-auto w-10/12"
+    >
+      <section
+        class="flex flex-col items-center md:flex-row-reverse h-4/5 mt-10 md:mt-32 justify-between"
+      >
+        <img
+          class="rounded-full size-11/12 md:size-1/3"
+          src="/assets/image.jpeg"
+        />
         <div>
           <div class="mt-5">
             <h2
@@ -27,35 +35,36 @@ import { TechnoComponent } from './components/techno/techno.component';
             </p>
           </div>
           <div class="flex flex-col gap-2 md:flex-row py-5 md:w-1/2">
-            @for (button of buttons; track $index) {
-            <app-button [bgcolor]="button.bgcolor" [text]="button.text">
-            </app-button>
-            }
+            <app-button bgcolor="bg-pmcolor" text="Contact me"></app-button>
+            <app-button bgcolor="bg-sgcolor" text="Resume"> </app-button>
           </div>
         </div>
       </section>
-       <section class="grid grid-cols-3 w-full m-auto md:w-1/2 md:pt-40 md:flex md:justify-between">
+      <section
+        class="grid grid-cols-3 w-full m-auto md:w-1/2 md:pt-40 md:flex md:justify-between"
+      >
         @for (techno of techons; track $index) {
         <app-techno [image]="techno.image" [title]="techno.title"></app-techno>
         }
       </section>
-      <section>3</section>
+      <section
+        class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-x-5 md:space-y-0 md:mt-10"
+      >
+        @for (project of projects; track $index) {
+        <app-card
+          title="{{ project.title }}"
+          image="{{ project.image }}"
+          description="{{ project.description }}"
+          link="{{ project.link_project }}"
+        ></app-card>
+        }
+      </section>
     </div>
   `,
 })
 export class AppComponent {
   title = 'portfolio';
-  buttons: Array<{ bgcolor: string; text: string }> = [
-    {
-      bgcolor: 'bg-pmcolor',
-      text: 'Contact me',
-    },
-    {
-      bgcolor: 'bg-sgcolor',
-      text: 'Resume',
-    },
-  ];
-  techons: Array<{ title: string; image: string }> = [
+  techons = [
     {
       title: 'Angular',
       image: 'angular-svgrepo-com.svg',
@@ -69,10 +78,6 @@ export class AppComponent {
       image: 'flask-svgrepo-com.svg',
     },
     {
-      title: 'Git',
-      image: 'git-svgrepo-com.svg',
-    },
-    {
       title: 'Linux',
       image: 'linux-svgrepo-com.svg',
     },
@@ -83,6 +88,29 @@ export class AppComponent {
     {
       title: 'SpringBoot',
       image: 'spring-boot-svgrepo-com.svg',
+    },
+  ];
+  projects = [
+    {
+      title: 'tish',
+      image: 'assets/project/project_2.png',
+      description:
+        'In the dynamic realm of advanced web development, I embarked on a project that showcases my expertise in Java Enterprise Edition (JEE) with JavaServer Pages (JSP) and Servlet technologies. The project revolves around the creation of a fully functional e-commerce website dedicated to the vibrant world of fashion.',
+      link_project: 'https://github.com/tbgracy/tish',
+    },
+    {
+      title: 'slate',
+      image: 'assets/project/project_3.png',
+      description:
+        'In the spirit of fostering collaborative learning and innovation, our team participated in a hackathon organized by IFM (Institut Français de Madagascar) with a focus on education. The result of our collaborative efforts is Slate, a web application designed to facilitate knowledge-sharing through a dynamic question-and-answer platform, influenced by the collaborative spirit of Full Stack Overflow.',
+      link_project: 'https://spudster-slate.netlify.app/',
+    },
+    {
+      title: "Joe's blog",
+      image: 'assets/project/project_4.png',
+      description:
+        "Embarking on a journey to share my insights, experiences, and technological adventures, I've created Joe's blog, a dynamic blog platform powered by Django's robust template rendering engine. This blog serves as a digital canvas where I articulate my thoughts, discoveries, and learnings within the vast realm of technology.",
+      link_project: 'https://nomeniavojoe.pythonanywhere.com/',
     },
   ];
 }
