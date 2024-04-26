@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <button
       class="{{
-        bgcolor
+        color
       }} text-mybgcolor text-sm font-bold w-full py-3 md:w-44 md:h-10 md:p-0 rounded-full"
     >
       {{ text }}
@@ -21,5 +21,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input('text') text: string = '';
-  @Input('bgcolor') bgcolor: string = '';
+  @Input('color') color: string = '';
 }

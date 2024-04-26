@@ -8,7 +8,7 @@ import { ButtonComponent } from '../button/button.component';
   template: `
     <div class="block rounded-lg bg-white">
       <div class="relative overflow-hidden bg-cover bg-no-repeat">
-        <img class="rounded-t-lg" src="{{ image }}" alt="{{ title }}" />
+        <img class="rounded-t-lg" src="/assets/project/{{ image }}" alt="{{ title }}" />
         <a href="{{ link }}">
           <div
             class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
