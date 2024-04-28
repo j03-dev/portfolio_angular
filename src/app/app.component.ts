@@ -51,7 +51,7 @@ import { CardComponent } from './components/card/card.component';
         }
       </section>
       <section
-        class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-x-5 md:space-y-0 md:mt-10"
+        class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-y-0 md:mt-20"
       >
         @for (project of projects; track $index) {
         <app-card
@@ -113,25 +113,28 @@ export class AppComponent {
       image: 'project_4.png',
       description:
         "Embarking on a journey to share my insights, experiences, and technological adventures, I've created Joe's blog, a dynamic blog platform powered by Django's robust template rendering engine. This blog serves as a digital canvas where I articulate my thoughts, discoveries, and learnings within the vast realm of technology.",
-      link_project:'https://nomeniavo-joe-blog.onrender.com/',
+      link_project: 'https://nomeniavo-joe-blog.onrender.com/',
     },
     {
-      title: "Russenger",
-      image: "project_5.png",
-      description: "Russenger is a Rust library designed to simplify the handling of Facebook Messenger webhook responses. It offers a convenient way to construct and send various types of responses, including text messages, quick replies, generic templates, and media attachments.",
-      link_project: "https://github.com/j03-dev/russenger"
+      title: 'Russenger',
+      image: 'project_5.png',
+      description:
+        'Introducing Russenger, a versatile Rust library engineered to streamline the management of Facebook Messenger webhook responses. Designed with simplicity and efficiency in mind, Russenger simplifies the construction and dispatching of diverse response types, such as text messages, quick replies, generic templates, and media attachments. This robust library empowers developers to effortlessly interact with Facebook Messenger APIs, enhancing the development process by providing a seamless and intuitive interface. With Russenger, handling webhook responses becomes a straightforward task, allowing developers to focus on building engaging and dynamic Messenger experiences with ease.',
+      link_project: 'https://github.com/j03-dev/russenger',
     },
     {
-      title: "TimeTable",
-      image: "project_6.png",
-      description: "Introducing a versatile CLI tool tailored for educational institutions seeking to streamline timetable creation. With meticulous attention to detail, this tool ensures balanced scheduling by enforcing constraints such as preventing consecutive days for subjects and allowing customization of weekly hours. Users can define hourly slots, distribute subjects across weekdays from Monday to Saturday mornings, and set precise class hours from 8:30 to 12:30 for mornings and 13:30 to 17:30 for afternoons. This intuitive solution promises efficiency and reliability, simplifying the complexities of timetable management for schools and universities.",
-      link_project: "https://github.com/tbgracy/timetable"
+      title: 'TimeTable',
+      image: 'project_6.png',
+      description:
+        'Introducing a versatile CLI tool tailored for educational institutions seeking to streamline timetable creation. With meticulous attention to detail, this tool ensures balanced scheduling by enforcing constraints such as preventing consecutive days for subjects and allowing customization of weekly hours. Users can define hourly slots, distribute subjects across weekdays from Monday to Saturday mornings, and set precise class hours from 8:30 to 12:30 for mornings and 13:30 to 17:30 for afternoons. This intuitive solution promises efficiency and reliability, simplifying the complexities of timetable management for schools and universities.',
+      link_project: 'https://github.com/tbgracy/timetable',
     },
     {
-      title: "Ossas-MusicPlayer",
-      image: "project_7.png",
-      description: "Introducing 'Ossas-MusicPlayer' a Python-based audio player crafted entirely with custom Tkinter, an educational project aimed at mastering application development. This intuitive player offers seamless audio playback functionality, providing users with a straightforward interface for enjoying their favorite tunes. Built from the ground up using Python, it exemplifies the power of Tkinter for creating user-friendly applications. Ossass-Music Player not only serves as a practical tool for enjoying music but also as a testament to the skills and knowledge gained through the process of learning application development with Tkinter.",
-      link_project: "https://github.com/j03-dev/ossas-MusicPlayer"
-    }
+      title: 'Ossas-MusicPlayer',
+      image: 'project_7.png',
+      description:
+        "Introducing 'Ossas-MusicPlayer' a Python-based audio player crafted entirely with custom Tkinter, an educational project aimed at mastering application development. This intuitive player offers seamless audio playback functionality, providing users with a straightforward interface for enjoying their favorite tunes. Built from the ground up using Python, it exemplifies the power of Tkinter for creating user-friendly applications. Ossass-Music Player not only serves as a practical tool for enjoying music but also as a testament to the skills and knowledge gained through the process of learning application development with Tkinter.",
+      link_project: 'https://github.com/j03-dev/ossas-MusicPlayer',
+    },
   ];
 }
