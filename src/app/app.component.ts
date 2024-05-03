@@ -43,7 +43,7 @@ import { CardComponent } from './components/card/card.component';
       <section
         class="grid grid-cols-3 w-full m-auto md:w-1/2 md:pt-40 md:flex md:justify-between"
       >
-        @for (techno of techons; track $index) {
+        @for (techno of technos; track $index) {
         <app-techno
           image="{{ techno.image }}"
           title="{{ techno.title }}"
@@ -67,7 +67,7 @@ import { CardComponent } from './components/card/card.component';
 })
 export class AppComponent {
   title = 'portfolio';
-  techons = [
+  technos = [
     {
       title: 'Angular',
       image: 'angular-svgrepo-com.svg',
@@ -120,7 +120,7 @@ export class AppComponent {
       image: 'project_5.png',
       description:
         'Introducing Russenger, a versatile Rust library engineered to streamline the management of Facebook Messenger webhook responses. Designed with simplicity and efficiency in mind, Russenger simplifies the construction and dispatching of diverse response types, such as text messages, quick replies, generic templates, and media attachments. This robust library empowers developers to effortlessly interact with Facebook Messenger APIs, enhancing the development process by providing a seamless and intuitive interface. With Russenger, handling webhook responses becomes a straightforward task, allowing developers to focus on building engaging and dynamic Messenger experiences with ease.',
-      link_project: 'https://github.com/j03-dev/russenger',
+      link_project: 'https://crate.io/crates/russenger',
     },
     {
       title: 'TimeTable',
