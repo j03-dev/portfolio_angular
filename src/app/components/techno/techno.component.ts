@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div class="flex items-center justify-center pb-5">
       <div class="flex flex-col items-center">
-        <img class="size-10" src="/assets/icon/{{ image }}" />
+        <img class="size-10" src="{{ image }}" />
         <p class="font-semibold text-sgcolor">{{ title }}</p>
       </div>
     </div>

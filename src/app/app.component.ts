@@ -69,28 +69,28 @@ export class AppComponent {
   title = 'portfolio';
   technos = [
     {
+      title: 'Python',
+      image: "https://www.vectorlogo.zone/logos/python/python-icon.svg",
+    },
+    {
+      title: 'Django',
+      image: 'https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg',
+    },
+    {
       title: 'Angular',
-      image: 'angular-svgrepo-com.svg',
-    },
-    {
-      title: 'Docker',
-      image: 'docker-svgrepo-com.svg',
-    },
-    {
-      title: 'Flask',
-      image: 'flask-svgrepo-com.svg',
-    },
-    {
-      title: 'Linux',
-      image: 'linux-svgrepo-com.svg',
+      image: 'https://www.vectorlogo.zone/logos/angular/angular-icon.svg',
     },
     {
       title: 'Rust',
-      image: 'rust-svgrepo-com.svg',
+      image: 'https://www.vectorlogo.zone/logos/rust-lang/rust-lang-icon.svg',
+    },
+    {
+      title: "Java",
+      image: "https://www.vectorlogo.zone/logos/java/java-icon.svg"
     },
     {
       title: 'SpringBoot',
-      image: 'spring-boot-svgrepo-com.svg',
+      image: 'https://www.vectorlogo.zone/logos/springio/springio-icon.svg',
     },
   ];
   projects = [
