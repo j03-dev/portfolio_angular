@@ -25,18 +25,26 @@ import { CardComponent } from './components/card/card.component';
             >
               Fullstack Developer
             </h2>
-            <p class="text-sgcolor text-lg max-w-4xl min-w-xs md:text-base">
-              My name is <b>FITAHIANA Nomeniavo Joe</b> but you can call me
-              <b><u>Joe</u></b
-              >. As a dedicated Fullstack Developer.I bring ideas throught the
-              language of code. Step into my digital realm, where each line of
-              code tells a table innovation and creativity. Transforming
-              concepts into captivating experiences.
+            <p
+              class="text-sgcolor text-lg max-w-4xl min-w-xs md:text-base pb-4"
+            >
+              Salama! I'm <b>FITAHIANA Nomeniavo Joe</b>, a Fullstack Developer
+              originating from the vibrant island of Madagascar. With a fervent
+              passion for technology, I navigate the digital realm with ease,
+              sculpting solutions with lines of code. I am committed to
+              streamlining the intricacies of digital communication. Join me on
+              this exhilarating journey where innovation converges with code, as
+              together, we shape the future of technology, one byte at a time.
             </p>
           </div>
-          <div class="flex flex-col gap-2 md:flex-row py-5 md:w-1/2">
-            <app-button icon="fas fa-envelope" color="bg-pmcolor" text="Contact me"></app-button>
-            <app-button icon="fas fa-download" color="bg-sgcolor" text="Resume"> </app-button>
+          <div class="flex flex-col gap-2 md:flex-row ply-5 md:w-1/2">
+            <app-button
+              icon="fas fa-envelope"
+              color="bg-pmcolor"
+              text="Contact me"
+            ></app-button>
+            <app-button icon="fas fa-download" color="bg-sgcolor" text="Resume">
+            </app-button>
           </div>
         </div>
       </section>
@@ -70,11 +78,12 @@ export class AppComponent {
   technos = [
     {
       title: 'Python',
-      image: "https://www.vectorlogo.zone/logos/python/python-icon.svg",
+      image: 'https://www.vectorlogo.zone/logos/python/python-icon.svg',
     },
     {
       title: 'Django',
-      image: 'https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg',
+      image:
+        'https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg',
     },
     {
       title: 'Angular',
@@ -85,8 +94,8 @@ export class AppComponent {
       image: 'https://www.vectorlogo.zone/logos/rust-lang/rust-lang-icon.svg',
     },
     {
-      title: "Java",
-      image: "https://www.vectorlogo.zone/logos/java/java-icon.svg"
+      title: 'Java',
+      image: 'https://www.vectorlogo.zone/logos/java/java-icon.svg',
     },
     {
       title: 'SpringBoot',
