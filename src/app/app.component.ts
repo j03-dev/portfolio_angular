@@ -35,8 +35,8 @@ import { CardComponent } from './components/card/card.component';
             </p>
           </div>
           <div class="flex flex-col gap-2 md:flex-row py-5 md:w-1/2">
-            <app-button color="bg-pmcolor" text="Contact me"></app-button>
-            <app-button color="bg-sgcolor" text="Resume"> </app-button>
+            <app-button icon="fas fa-envelope" color="bg-pmcolor" text="Contact me"></app-button>
+            <app-button icon="fas fa-download" color="bg-sgcolor" text="Resume"> </app-button>
           </div>
         </div>
       </section>
@@ -51,7 +51,7 @@ import { CardComponent } from './components/card/card.component';
         }
       </section>
       <section
-        class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-y-0 md:mt-20"
+        class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-y-0 md:mt-20 md:pt-20 md:pb-10 md:gap-5 md:justify-between md:items-start"
       >
         @for (project of projects; track $index) {
         <app-card
