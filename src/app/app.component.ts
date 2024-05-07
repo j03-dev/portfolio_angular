@@ -49,7 +49,7 @@ import { CardComponent } from './components/card/card.component';
         </div>
       </section>
       <section
-        class="grid grid-cols-3 w-full m-auto md:w-1/2 md:pt-40 md:flex md:justify-between"
+        class="grid grid-cols-3 w-full m-auto pt-24 pb-24 md:pb-0 md:w-1/2 md:pt-40 md:flex md:justify-between"
       >
         @for (techno of technos; track $index) {
         <app-techno
