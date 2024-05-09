@@ -42,8 +42,14 @@ import { CardComponent } from './components/card/card.component';
               icon="fas fa-envelope"
               color="bg-pmcolor"
               text="Contact me"
+              link="#"
             ></app-button>
-            <app-button icon="fas fa-download" color="bg-sgcolor" text="Resume">
+            <app-button
+              icon="fas fa-download"
+              color="bg-sgcolor"
+              text="Resume"
+              link="https://drive.google.com/file/d/1GWXRp4QJb07W1ws0e4drVIA6J7MvpkLw/view?usp=sharing"
+            >
             </app-button>
           </div>
         </div>
