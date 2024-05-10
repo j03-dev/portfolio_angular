@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from './components/button/button.component';
 import { TechnoComponent } from './components/techno/techno.component';
 import { CardComponent } from './components/card/card.component';
+import { TechnoService } from './service/techno.service';
+import { ProjectService } from './service/project.service';
 
 @Component({
   selector: 'app-root',
@@ -57,7 +59,7 @@ import { CardComponent } from './components/card/card.component';
       <section
         class="grid grid-cols-3 w-full m-auto pt-24 pb-24 md:pb-0 md:w-1/2 md:pt-40 md:flex md:justify-between"
       >
-        @for (techno of technos; track $index) {
+        @for (techno of techno.technos; track $index) {
         <app-techno
           image="{{ techno.image }}"
           title="{{ techno.title }}"
@@ -67,7 +69,7 @@ import { CardComponent } from './components/card/card.component';
       <section
         class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-y-0 md:mt-20 md:pt-20 md:pb-10 md:gap-5 md:justify-between md:items-start"
       >
-        @for (project of projects; track $index) {
+        @for (project of project.projects; track $index) {
         <app-card
           title="{{ project.title }}"
           image="{{ project.image }}"
@@ -82,86 +84,6 @@ import { CardComponent } from './components/card/card.component';
 })
 export class AppComponent {
   title = 'portfolio';
-  technos = [
-    {
-      title: 'Python',
-      image: 'https://www.vectorlogo.zone/logos/python/python-icon.svg',
-    },
-    {
-      title: 'Django',
-      image:
-        'https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg',
-    },
-    {
-      title: 'Angular',
-      image: 'https://www.vectorlogo.zone/logos/angular/angular-icon.svg',
-    },
-    {
-      title: 'Rust',
-      image: 'https://www.vectorlogo.zone/logos/rust-lang/rust-lang-icon.svg',
-    },
-    {
-      title: 'Java',
-      image: 'https://www.vectorlogo.zone/logos/java/java-icon.svg',
-    },
-    {
-      title: 'SpringBoot',
-      image: 'https://www.vectorlogo.zone/logos/springio/springio-icon.svg',
-    },
-  ];
-  projects = [
-    {
-      title: 'Tish',
-      image: 'project_2.png',
-      description:
-        'Tish is an e-commerce website dedicated to fashion, built using Java Enterprise Edition (JEE), JavaServer Pages (JSP), and Servlet technologies.',
-      link_project: 'https://tish.onrender.com',
-      technos: ['fab fa-java', 'fab fa-html5', 'fab fa-js', 'fab fa-css3-alt'],
-    },
-    {
-      title: 'Slate',
-      image: 'project_3.png',
-      description:
-        "Slate is a web application developed during a hackathon, designed to facilitate knowledge-sharing through a dynamic question-and-answer platform. It's inspired by Stack Overflow and built with Python, HTML5, React, and Bootstrap.",
-      link_project: 'https://spudster-slate.netlify.app/',
-      technos: [
-        'fab fa-python',
-        'fab fa-html5',
-        'fab fa-react',
-        'fab fa-bootstrap',
-      ],
-    },
-    {
-      title: "Joe's blog",
-      image: 'project_4.png',
-      description:
-        "Joe's blog is a platform where I share my insights, experiences, and technological adventures. It's a dynamic blog platform powered by Django's robust template rendering engine.",
-      link_project: 'https://nomeniavo-joe-blog.onrender.com/',
-      technos: ['fab fa-python', 'fab fa-html5', 'fab fa-bootstrap'],
-    },
-    {
-      title: 'Russenger',
-      image: 'project_5.png',
-      description:
-        'Russenger is a Rust library designed to simplify the management of Facebook Messenger webhook responses. It provides an intuitive interface for constructing and sending various response types, enhancing the development process by providing a seamless and intuitive interface.',
-      link_project: 'https://crates.io/crates/russenger',
-      technos: ['fab fa-rust'],
-    },
-    {
-      title: 'TimeTable',
-      image: 'project_6.png',
-      description:
-        'TimeTable is a CLI tool designed for educational institutions to simplify timetable creation. It enforces scheduling constraints and allows customization of class hours, ensuring balanced and efficient timetables.',
-      link_project: 'https://github.com/tbgracy/timetable',
-      technos: ['fab fa-python'],
-    },
-    {
-      title: 'Ossas-MusicPlayer',
-      image: 'project_7.png',
-      description:
-        'Ossas-MusicPlayer is a Python-based audio player built with Tkinter. It provides a user-friendly interface for seamless audio playback, demonstrating the power of Tkinter in application development.',
-      link_project: 'https://github.com/j03-dev/ossas-MusicPlayer',
-      technos: ['fab fa-python'],
-    },
-  ];
+  techno = new TechnoService();
+  project = new ProjectService();
 }
