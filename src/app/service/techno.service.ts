@@ -19,6 +19,10 @@ export class TechnoService {
       image: 'https://www.vectorlogo.zone/logos/angular/angular-icon.svg',
     },
     {
+      title: 'TailwindCss',
+      image: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg',
+    },
+    {
       title: 'Rust',
       image: 'https://www.vectorlogo.zone/logos/rust-lang/rust-lang-icon.svg',
     },
