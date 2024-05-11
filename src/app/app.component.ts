@@ -50,7 +50,7 @@ import { ProjectService } from './service/project.service';
               icon="fas fa-download"
               color="bg-sgcolor"
               text="Resume"
-              link="https://drive.google.com/file/d/1GWXRp4QJb07W1ws0e4drVIA6J7MvpkLw/view?usp=sharing"
+              link="https://drive.google.com/file/d/1vQ2lFTfD7cinu4SIdO4AOk2AbGqRvKT5/view?usp=sharing"
             >
             </app-button>
           </div>
