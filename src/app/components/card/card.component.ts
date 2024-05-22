@@ -5,11 +5,20 @@ import { ButtonComponent } from '../button/button.component';
   selector: 'app-card',
   standalone: true,
   imports: [ButtonComponent],
+  styles: `
+    .card:hover {
+      height: auto;
+    }
+    .card:hover .description {
+      height: auto;
+      overflow: auto;
+    }
+  `,
   template: `
-    <div class="block rounded-lg bg-white md:m-2">
+    <div class="card block rounded-lg bg-white md:m-2 h-[500px]">
       <div class="relative overflow-hidden bg-cover bg-no-repeat">
         <img
-          class="rounded-t-lg max-h-80"
+          class="rounded-t-lg h-[300px] object-cover"
           src="/assets/project/{{ image }}"
           alt="{{ title }}"
         />
@@ -21,7 +30,7 @@ import { ButtonComponent } from '../button/button.component';
       </div>
       <div class="p-6 text-surface text-sgcolor">
         <h5 class="mb-2 text-xl font-bold leading-tight">{{ title }}</h5>
-        <p class="mb-4 text-base">{{ description }}</p>
+        <p class="description mb-4 text-base overflow-hidden h-[90px]">{{ description }}</p>
         <div class="flex space-x-2">
           @for (techno of technos; track $index) {
           <span class="{{ techno }} text-2xl"></span>
@@ -30,7 +39,6 @@ import { ButtonComponent } from '../button/button.component';
       </div>
     </div>
   `,
-  styles: ``,
 })
 export class CardComponent {
   @Input('title') title: string = '';

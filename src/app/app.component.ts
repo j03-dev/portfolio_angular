@@ -67,7 +67,7 @@ import { ProjectService } from './service/project.service';
         }
       </section>
       <section
-        class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-y-0 md:mt-20 md:pt-20 md:pb-10 md:gap-5 md:justify-between md:items-start"
+        class="grid grid-cols-1 w-full m-auto md:grid-cols-3 space-y-5 md:space-y-0 md:mt-20 md:pt-20 md:pb-10 md:gap-5 md:justify-between md:items-start md:grid-rows-[550px]"
       >
         @for (project of project.projects; track $index) {
         <app-card
