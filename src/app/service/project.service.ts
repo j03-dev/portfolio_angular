@@ -1,11 +1,21 @@
 import { Injectable } from '@angular/core';
 
+export interface Project {
+  id: number;
+  title: string;
+  image: string;
+  description: string;
+  link_project: string;
+  technos: string[];
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectService {
-  projects = [
+  protected projects: Project[] = [
     {
+      id: 1,
       title: 'Tish',
       image: 'project_2.png',
       description:
@@ -14,6 +24,7 @@ export class ProjectService {
       technos: ['fab fa-java', 'fab fa-html5', 'fab fa-js', 'fab fa-css3-alt'],
     },
     {
+      id: 2,
       title: 'Slate',
       image: 'project_3.png',
       description:
@@ -27,6 +38,7 @@ export class ProjectService {
       ],
     },
     {
+      id: 3,
       title: "Joe's blog",
       image: 'project_4.png',
       description:
@@ -35,6 +47,7 @@ export class ProjectService {
       technos: ['fab fa-python', 'fab fa-html5', 'fab fa-bootstrap'],
     },
     {
+      id: 4,
       title: 'Russenger',
       image: 'project_5.png',
       description:
@@ -43,6 +56,7 @@ export class ProjectService {
       technos: ['fab fa-rust'],
     },
     {
+      id: 5,
       title: 'TimeTable',
       image: 'project_6.png',
       description:
@@ -51,6 +65,7 @@ export class ProjectService {
       technos: ['fab fa-python'],
     },
     {
+      id: 6,
       title: 'Ossas-MusicPlayer',
       image: 'project_7.png',
       description:
@@ -61,4 +76,12 @@ export class ProjectService {
   ];
 
   constructor() {}
+
+  getAllProjects() {
+    return this.projects;
+  }
+
+  getProjectByTitle(id: number) {
+    return this.projects.find((project) => project.id === id);
+  }
 }
