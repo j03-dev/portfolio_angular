@@ -1,18 +1,19 @@
-import { Component, inject } from "@angular/core";
-import { ButtonComponent } from "./components/button/button.component";
-import { TechnoComponent } from "./components/techno/techno.component";
-import { CardComponent } from "./components/card/card.component";
-import { Techno, TechnoService } from "./service/techno.service";
-import { ProjectService, Project } from "./service/project.service";
+import { Component, inject } from '@angular/core';
+import { ButtonComponent } from './components/button/button.component';
+import { TechnoComponent } from './components/techno/techno.component';
+import { CardComponent } from './components/card/card.component';
+import { AlbumComponent } from './components/album/album.component';
+import { Techno, TechnoService } from './service/techno.service';
+import { ProjectService, Project } from './service/project.service';
 
 @Component({
-  selector: "app-root",
+  selector: 'app-root',
   standalone: true,
-  imports: [ButtonComponent, TechnoComponent, CardComponent],
-  templateUrl: "./app.component.html",
+  imports: [ButtonComponent, TechnoComponent, CardComponent, AlbumComponent],
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = "portfolio";
+  title = 'portfolio';
   technoService = inject(TechnoService);
   projectService = inject(ProjectService);
   list_techno: Techno[] = [];

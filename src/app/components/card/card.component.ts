@@ -6,12 +6,15 @@ import { ButtonComponent } from '../button/button.component';
   standalone: true,
   imports: [ButtonComponent],
   styles: `
-    .card:hover {
-      height: auto;
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .card:hover .description {
-      height: auto;
-      overflow: auto;
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .description {
+      transition: height 0.3s ease;
     }
   `,
   template: `
