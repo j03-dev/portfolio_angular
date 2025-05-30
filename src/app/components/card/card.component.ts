@@ -18,29 +18,38 @@ import { ButtonComponent } from '../button/button.component';
     }
   `,
   template: `
-    <div class="card block rounded-lg bg-white md:m-2 h-[500px]">
-      <div class="relative overflow-hidden bg-cover bg-no-repeat">
-        <img
-          class="rounded-t-lg h-[300px] object-cover"
-          src="/assets/project/{{ image }}"
-          alt="{{ title }}"
-        />
-        <a href="{{ link }}">
-          <div
-            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-          ></div>
-        </a>
-      </div>
-      <div class="p-6 text-surface text-sgcolor">
-        <h5 class="mb-2 text-xl font-bold leading-tight">{{ title }}</h5>
-        <p class="description mb-4 text-base overflow-hidden h-[90px]">{{ description }}</p>
-        <div class="flex space-x-2">
-          @for (techno of technos; track $index) {
-          <span class="{{ techno }} text-2xl"></span>
-          }
-        </div>
-      </div>
+<div class="card block rounded-2xl overflow-hidden bg-white shadow-md transition-transform hover:scale-[1.02] md:m-2 h-[480px] w-full">
+  <div class="relative w-full h-[220px]">
+    @if (type == "REPO") {
+      <img
+        src="https://opengraph.githubassets.com/1/{{ link }}"
+        class="w-full max-h-[220px] object-contain rounded-t-lg bg-white"
+      />
+    } @else {
+      <img
+        class="w-full h-full object-cover"
+        src="/assets/project/{{ image }}"
+        alt="{{ title }}"
+      />
+    }
+    <a href="{{ link }}" target="_blank" rel="noopener noreferrer">
+      <div
+        class="absolute inset-0 bg-black/10 opacity-0 hover:opacity-100 transition-opacity duration-300"
+      ></div>
+    </a>
+  </div>
+  <div class="p-5 text-surface text-sgcolor flex flex-col justify-between h-[260px]">
+    <div>
+      <h5 class="mb-2 text-xl font-bold line-clamp-2">{{ title }}</h5>
+      <p class="description mb-4 text-gray-600 text-base line-clamp-4">{{ description }}</p>
     </div>
+    <div class="flex flex-wrap gap-2 mt-auto">
+      @for (techno of technos; track $index) {
+        <span class="{{ techno }} text-2xl"></span>
+      }
+    </div>
+  </div>
+</div>
   `,
 })
 export class CardComponent {
@@ -49,4 +58,5 @@ export class CardComponent {
   @Input('description') description: String = '';
   @Input('link') link: string = '';
   @Input('technos') technos: string[] = [];
+  @Input("type") type: String = '';
 }
