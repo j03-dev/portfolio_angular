@@ -1,10 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-button',
+    imports: [],
+    template: `
     <a href="{{ link }}">
       <button
         class="{{
@@ -15,11 +14,11 @@ import { Component, Input } from '@angular/core';
       </button>
     </a>
   `,
-  styles: `
+    styles: `
   .hover_animation {
     
   }
-  `,
+  `
 })
 export class ButtonComponent {
   @Input('link') link: string = '';

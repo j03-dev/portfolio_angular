@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-album',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-album',
+    imports: [],
+    template: `
     <div class="flex w-full">
       <div class="w-[55%]">
         <img class="rounded-l-[20px]" src="/assets/image.jpeg" />
@@ -32,6 +31,6 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: ``,
+    styles: ``
 })
 export class AlbumComponent {}

@@ -1,10 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-techno',
-  standalone: true,
-  imports: [],
-  styles: `
+    selector: 'app-techno',
+    imports: [],
+    styles: `
     .techno-container {
       transition: transform 0.3s ease;
     }
@@ -15,14 +14,14 @@ import { Component, Input } from '@angular/core';
       transition: transform 0.3s ease;
     }
   `,
-  template: `
+    template: `
     <div class="techno-container flex items-center justify-center pb-5">
       <div class="flex flex-col items-center">
         <img class="size-10" src="{{ image }}" />
         <p class="font-semibold text-sgcolor">{{ title }}</p>
       </div>
     </div>
-  `,
+  `
 })
 export class TechnoComponent {
   @Input('image') image: string = '';

@@ -2,10 +2,9 @@ import { Component, Input } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
-  selector: 'app-card',
-  standalone: true,
-  imports: [ButtonComponent],
-  styles: `
+    selector: 'app-card',
+    imports: [ButtonComponent],
+    styles: `
     .card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -17,7 +16,7 @@ import { ButtonComponent } from '../button/button.component';
       transition: height 0.3s ease;
     }
   `,
-  template: `
+    template: `
 <div class="card block rounded-2xl overflow-hidden bg-white shadow-md transition-transform hover:scale-[1.02] md:m-2 h-[480px] w-full">
   <div class="relative w-full h-[220px]">
     @if (type == "REPO") {
@@ -50,7 +49,7 @@ import { ButtonComponent } from '../button/button.component';
     </div>
   </div>
 </div>
-  `,
+  `
 })
 export class CardComponent {
   @Input('title') title: string = '';

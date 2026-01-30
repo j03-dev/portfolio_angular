@@ -7,10 +7,9 @@ import { Techno, TechnoService } from './service/techno.service';
 import { ProjectService, Project } from './service/project.service';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [ButtonComponent, TechnoComponent, CardComponent, AlbumComponent],
-  templateUrl: './app.component.html',
+    selector: 'app-root',
+    imports: [ButtonComponent, TechnoComponent, CardComponent, AlbumComponent],
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'portfolio';
