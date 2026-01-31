@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Styling
+
+This project utilizes [Tailwind CSS](https://tailwindcss.com/) for a utility-first CSS framework and [DaisyUI](https://daisyui.com/) as a Tailwind CSS component library to streamline UI development and maintain a consistent design system.
+

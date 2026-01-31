@@ -1,0 +1,5 @@
+<label class="swap swap-rotate text-3xl">
+  <input type="checkbox" class="theme-controller" [checked]="theme() === 'dark'" (change)="toggleTheme()" />
+  <fa-icon [icon]="faSun" class="swap-off"></fa-icon>
+  <fa-icon [icon]="faMoon" class="swap-on"></fa-icon>
+</label>

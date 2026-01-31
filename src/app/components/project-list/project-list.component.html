@@ -1,0 +1,11 @@
+<section class="mx-auto w-full max-w-7xl
+         grid grid-cols-1 gap-5
+         md:grid-cols-3 md:mt-20 md:pt-20 md:pb-10">
+
+  @for (project of project_list; track $index) {
+  <app-card title="{{ project.title }}" image="{{ project.image }}" description="{{ project.description }}"
+    [technos]="project.technos">
+  </app-card>
+  }
+
+</section>
