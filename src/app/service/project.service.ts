@@ -1,12 +1,22 @@
 import { Injectable } from '@angular/core';
+import {
+  faPython,
+  faHtml5,
+  faReact,
+  faBootstrap,
+  faCss3Alt,
+  faJs,
+  faJava,
+  faRust,
+  faAngular,
+} from '@fortawesome/free-brands-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export interface Project {
   title: string;
-  image?: string;
+  image: string;
   description: string;
-  link_project: string;
-  technos: string[];
-  type: "REPO" | "WEBSITE";
+  technos: IconDefinition[];
 }
 
 @Injectable({
@@ -16,82 +26,87 @@ export class ProjectService {
   protected projects: Project[] = [
     {
       title: 'Tish',
-      image: 'project_2.png',
+      image: '/assets/project/project_2.png',
       description:
-        'Tish is an e-commerce website dedicated to fashion, built using Java Enterprise Edition (JEE), JavaServer Pages (JSP), and Servlet technologies.',
-      link_project: 'https://tish.onrender.com',
-      technos: ['fab fa-java', 'fab fa-html5', 'fab fa-js', 'fab fa-css3-alt'],
-      type: 'WEBSITE',
+        'Tish is an e-commerce website dedicated to fashion, built with Java Enterprise Edition (JEE), JSP, and Servlet technologies.',
+      technos: [faJava, faHtml5, faJs, faCss3Alt],
     },
     {
       title: 'Slate',
-      image: 'project_3.png',
+      image: '/assets/project/project_3.png',
       description:
-        "Slate is a web application developed during a hackathon, designed to facilitate knowledge-sharing through a dynamic question-and-answer platform. It's inspired by Stack Overflow and built with Python, HTML5, React, and Bootstrap.",
-      link_project: 'https://spudster-slate.netlify.app/',
-      technos: [
-        'fab fa-python',
-        'fab fa-html5',
-        'fab fa-react',
-        'fab fa-bootstrap',
-      ],
-      type: 'WEBSITE',
+        "Slate is a QA‑style web app developed during a hackathon, inspired by Stack Overflow. Built with Python, HTML5, React, and Bootstrap.",
+      technos: [faPython, faHtml5, faReact, faBootstrap],
     },
     {
       title: "Joe's blog",
-      image: 'project_4.png',
+      image: '/assets/project/project_4.png',
       description:
-        "Joe's blog is a platform where I share my insights, experiences, and technological adventures. It's a dynamic blog platform powered by Django's robust template rendering engine.",
-      link_project: 'https://nomeniavo-joe-blog.onrender.com/',
-      technos: ['fab fa-python', 'fab fa-html5', 'fab fa-bootstrap'],
-      type: 'WEBSITE',
+        "Joe's blog is a dynamic platform powered by Django’s templates, where I share tech insights and personal experiences.",
+      technos: [faPython, faHtml5, faBootstrap],
     },
     {
       title: 'Metatype',
+      image: 'https://opengraph.githubassets.com/1/metatypedev/metatype',
       description:
-        'Metatype is a declarative API development platform that enables developers to build backend components using WebAssembly (WASM), TypeScript, and Python. It facilitates the creation of modular APIs through programmable virtual graphs called typegraphs, allowing seamless integration with various data sources and legacy systems.',
-      link_project: 'metatypedev/metatype',
-      technos: ['fab fa-python', 'fab fa-rust', 'fab fa-typescript'],
-      type: 'REPO',
+        'Metatype is a declarative platform for API development using WebAssembly, TypeScript, and Python for modular backend components.',
+      technos: [faPython, faAngular],
     },
     {
       title: 'Russenger',
+      image: 'https://opengraph.githubassets.com/1/j03-dev/russenger',
       description:
-        'Russenger is a Rust library designed to simplify the management of Facebook Messenger webhook responses. It provides an intuitive interface for constructing and sending various response types, enhancing the development process by providing a seamless and intuitive interface.',
-      link_project: 'j03-dev/russenger',
-      technos: ['fab fa-rust'],
-      type: 'REPO',
+        'Russenger is a Rust library to simplify Facebook Messenger webhook responses with an intuitive Rust API.',
+      technos: [faRust],
     },
     {
       title: 'Oxapy',
-      description: "Oxapy is a Python HTTP server library built in Rust, offering a fast, safe, and feature-rich implementation. It provides routing with path parameters, middleware support, static file serving, application state management, and request/response handling, aiming to combine Python's simplicity with Rust's performance.",
-      link_project: 'j03-dev/oxapy',
-      technos: ['fab fa-python', 'fab fa-rust'],
-      type: 'REPO',
+      image: 'https://opengraph.githubassets.com/1/j03-dev/oxapy',
+      description:
+        'Oxapy is a Python HTTP server library built in Rust, offering fast routing, middleware support, static file serving, and state management.',
+      technos: [faPython, faRust],
+    },
+    {
+      title: 'RusqlAlchemy',
+      image: 'https://opengraph.githubassets.com/1/j03-dev/rusql-alchemy',
+      description:
+        'RusqlAlchemy is an ORM‑style Rust library inspired by Django, designed to simplify database interaction with Rust.',
+      technos: [faRust],
+    },
+    {
+      title: 'DoYou',
+      image: 'https://opengraph.githubassets.com/1/j03-dev/doyou',
+      description:
+        'DoYou is a Rust‑based music player application focused on simplicity and performance.',
+      technos: [faRust],
+    },
+    {
+      title: 'System Theme',
+      image: 'https://opengraph.githubassets.com/1/j03-dev/system-theme.hx',
+      description:
+        'System Theme is a plugin for the Helix editor that auto‑switches between light and dark themes.',
+      technos: [faRust],
     },
     {
       title: 'Antsirabe Bus API',
+      image: 'https://opengraph.githubassets.com/1/j03-dev/bus_antsirabe_api',
       description:
-        'Antsirabe Bus API is a RESTful API designed to provide real-time bus schedule data for the city of Antsirabe. Built using Oxapy, a Python HTTP server library developed in Rust, it ensures high performance and safety. The API offers endpoints for retrieving bus routes, schedules, and real-time tracking information, facilitating efficient public transportation management.',
-      link_project: 'j03-dev/bus_antsirabe_api',
-      technos: ['fab fa-python', 'fab fa-rust'],
-      type: 'REPO',
+        'Antsirabe Bus API is a REST API offering real‑time bus schedule data for Antsirabe, built with Rust and Python.',
+      technos: [faPython, faRust],
     },
     {
       title: 'TimeTable',
+      image: 'https://opengraph.githubassets.com/1/tbgracy/timetable',
       description:
-        'TimeTable is a CLI tool designed for educational institutions to simplify timetable creation. It enforces scheduling constraints and allows customization of class hours, ensuring balanced and efficient timetables.',
-      link_project: 'tbgracy/timetable',
-      technos: ['fab fa-python'],
-      type: 'REPO',
+        'TimeTable is a CLI tool helping educational institutions create balanced timetables with constraint‑based scheduling.',
+      technos: [faPython],
     },
     {
-      title: 'Osas-Player',
+      title: 'Osas‑Player',
+      image: 'https://opengraph.githubassets.com/1/j03-dev/osas-player',
       description:
-        'Ossas-Player is a Python-based audio player built with Tkinter. It provides a user-friendly interface for seamless audio playback, demonstrating the power of Tkinter in application development.',
-      link_project: 'j03-dev/osas-player',
-      technos: ['fab fa-python'],
-      type: 'REPO',
+        'Osas‑Player is a Python audio player built with Tkinter, offering a user‑friendly GUI for playback.',
+      technos: [faPython],
     },
   ];
 
@@ -100,5 +115,4 @@ export class ProjectService {
   getAllProjects() {
     return this.projects;
   }
-
 }
